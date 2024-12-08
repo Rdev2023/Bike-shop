@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Bike Shop</title>
+		<meta charset="utf-8"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="wraper">
+            <header class="container">
+                <span style="position:relative; left:1%;"><img src="images/logo.jpg" alt="Logo">
+                </span>
+                <h1>Bike Shop</h1>
+            </header>
+            <nav class="container">
+                <p><a href="index.html">Home</a></p>
+                <p><a href="contacts.html">Contacts</a></p>
+                <script>
+                    $(function () {
+                        $("#datepicker").datepicker({
+                            showAnim:"slide",
+                            showButtonPanel:true,
+                            changeMonth:true,
+                            changeYear:true,
+                            minDate:0,
+                            maxDate:"+4M +5D",
+                            showOn:"both",
+                            buttonImage:"images/date.png",
+                            buttonImageOnly:true
+
+                        });
+                    });
+
+                </script>
+            </nav>
+            <main class="container">
+                <div id="cards">
+                    <div id="main-card" class="card">
+                        <div class="freshness">
+                            New!
+                        </div>
+                        <div class="product-name">Disc Road Bike</div>
+                        <img src="images/Disc Road Bike.jpg" alt="Disc Road Bike">
+                        <div class="description">
+                           <p> Multispeed</p>
+                           <p>Weight: 30 lb.</p>
+                           <p>Wheels: 21 inch.</p>
+                        </div>
+                        <div class="offer">
+                            <div class="shipment">
+                            Free shiping
+                            </div>
+                            <div class="price">
+                            300$
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="product-name">Mountain Bike</div>
+                        <img src="images/Mountain Bike.jpg" alt="Mountain Bike">
+                        <div class="description">
+                            <p>Multispeed</p>
+                            <p>Weight: 30 lb.</p>
+                            <p>Wheels: 21 inch.</p>
+                        </div>
+                        <div class="offer">
+                        <div class="shipment">
+                            Free shiping
+                        </div>
+                        <div class="price">
+                            350$
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="freshness">
+                            New!
+                        </div>
+                        <div class="product-name">
+                            Road Bike
+                        </div>
+                        <img src="images/Road Bike.jpg" alt="Road Bike">
+                        <div class="description">
+                            <p>Multispeed</p>
+                            <p>Weight: 40 lb.</p>
+                            <p>Wheels: 25 inch.</p>
+                        </div>
+                        <div class="offer">
+                        <div class="shipment">Free shiping</div>
+                        <div class="price">250$</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="freshness">
+                            New!
+                        </div>
+                        <div class="product-name">
+                            Touring Bike
+                        </div>
+                        <img src="images/Touring Bike.jpg" alt="Touring Bike">
+                        <div class="description">
+                            <p>Multispeed</p>
+                            <p>Weight: 40 lb.</p>
+                            <p>Wheels: 25 inch.</p>
+                        </div>
+                        <div class="offer">
+                            <div class="shipment">
+                                Free shiping
+                            </div>
+                            <div class="price">
+                                200$
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="product-name">
+                            Granite Bike
+                        </div>
+                        <img src="images/Granite Bike.jpg" alt="Granite Bike">
+                        <div class="description">
+                            <p>Multispeed</p>
+                            <p>Weight: 20 lb.</p>
+                            <p>Wheels: 20 inch.</p>
+                        </div>
+                        <div class="offer">
+                            <div class="shipment">
+                                Free shiping
+                            </div>
+                            <div class="price">
+                                125$
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <aside class="container">
+                    <div class="ui-widget">
+                            <label for="tags">Search: </label>
+                            <input id="tags">
+                    </div>
+                    <p><div id="datepicker"></div></p>
+
+            </aside>
+            <footer class="container">
+            </footer>
+        </div>
+        <script>
+            $(function(){
+                var availableTags=[
+                    "Disc Road Bike",
+                    "Mountain Bike",
+                    "Touring Bike",
+                    "Road Bike",
+                    "Granite Bike"
+                ];
+                $("#tags").autocomplete({
+                    source:availableTags
+                });
+            });
+        </script>
+    </body>
